@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Weather Dashboard</h1>
+            <button id="themeBtn">🌙 Dark Mode</button>
+        </header>
+
+        <form id="weatherForm">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="loading" class="loading">
+            Loading...
+        </div>
+
+        <p id="error"></p>
+
+        <section id="currentWeather" class="weather-card">
+            <h2 id="city"></h2>
+            <h1 id="temperature"></h1>
+            <p id="description"></p>
+            <p id="feelsLike"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+
+            <button id="addFavorite">
+                ❤️ Add to Favorites
+            </button>
+        </section>
+
+        <h2>5-Day Forecast</h2>
+        <div id="forecast" class="forecast"></div>
+
+        <h2>Favorite Cities</h2>
+        <div id="favorites" class="favorites"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
